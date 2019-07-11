@@ -28,8 +28,6 @@ void setup() {
   pinMode(TRIG, OUTPUT);//pin TRIG como salida
   pinMode(ECHO, INPUT);//pin ECHO como entrada
   
-  //comprobamos el funcionamiento del bmp180
-  
 }
 
 void loop() {
@@ -45,7 +43,7 @@ void loop() {
   //posXbol
   //posYbol
 
-  // Proceso de envio de muestras al servidor
+  // Proceso de envio de movimientos al servidor
   Serial.println("Envio de dato, conectando...");
   lcd.clear();
   lcd.setCursor(0,0);
@@ -56,16 +54,16 @@ void loop() {
   if (cliente.connect(server, 80)>0) {  // Conexion con el servidor(client.connect(server, 80)>0
     cliente.print("GET /arduino/control/conexionArduino.php?posYJug1_php="); // Enviamos los datos por GET
     cliente.print(posYJug1);
-    cliente.print("&hum_php=");
+    cliente.print("&posYJug2_php=");
     cliente.print(posYJug2);
-    cliente.print("&temp_php=");
+    cliente.print("&posXbol_php=");
     cliente.print(posXbol);
-    cliente.print("&dist_php=");
+    cliente.print("&posYbol_php=");
     cliente.print(posYbol);
     cliente.println(" HTTP/1.0");
     cliente.println("User-Agent: Arduino 1.0");
     cliente.println();
-    Serial.println("Envio con exito (al archivo controller/index y models/herramienta)");
+    Serial.println("Envio con exito ");
     lcd.clear();
     lcd.setCursor(0,1);
     lcd.print("Envio con exito");
