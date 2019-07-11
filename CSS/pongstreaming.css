@@ -1,0 +1,91 @@
+#body {
+	width: 1300px;
+}
+
+#contenedor {
+	position: relative;
+	width: 840px;
+	height: 420px;
+}
+
+#modal {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 100%;
+	height: 100%;
+	background-color: #52ADF3;
+}
+
+#boton {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	border-radius: 15px;
+	background-color: #000000;
+}
+
+canvas {
+	border: 5px solid;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	background-color: #52ADF3;
+}
+
+#cabeceraWeb {  /*selector por id*/
+
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #201D1D;
+}
+
+#navegacionPrincipal {
+
+	color:#FFFFFF;
+	background-color: #383434;
+}
+
+#barraLateral {
+
+	background-color: #5D615D;
+	float: left; /* cambia a disposicion en linea y se ajusta al tamaño del texto en su interior*/
+	height: 800px;
+	width: 380px;
+}
+
+#contenidoPrincipal {
+
+	color: #FFFFFF;
+	background-color: #5D615D;
+	margin-left: 400px; /*distancia de la parte izquierda del elemento conrespecto a el elemento que esta a la izquierda del que le damos margen.*/
+	padding-left: 15px;
+	padding-top: 15px;
+	height: 800px;
+}
+
+#piePrincipal {
+
+	text-align: center;
+	background-color: #B7B2B2;
+	clear: both;
+}
+
+li {  /*selector por etiqueta*/
+
+	background-color: #798184;
+	display: inline; /* disposicion de los elementos*/
+}
+
+td {
+
+	margin-left: 20px;
+	padding-left: 15px;
+	padding-top: 15px;
+	
+}
+
+#datos {
+	border: 2px;
+}
